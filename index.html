@@ -347,7 +347,6 @@ const days = [
       },
       {
         title: "Pull-up skill work",
-        badge: "do first",
         type: "exercises",
         items: [
           { name: "Pull-ups (or assisted pull-up machine)", sets: "4-5 x 3-5", rest: "2-3 min", muscles: "Lats, biceps, upper back", note: "Fresh, first thing. Stop 1-2 reps short of failure every set. No pull-up yet? Use heavy assist, or jump to the top and lower for 4-5 sec on the negative.", video: "pull up" }
@@ -365,17 +364,14 @@ const days = [
       },
       {
         title: "Shoulders",
-        badge: "superset",
         type: "exercises",
         items: [
-          { name: "Dumbbell shoulder press", sets: "3x8-10", rest: "0 sec to next, 90 sec after pair", muscles: "Front/side delts, triceps", note: "Superset this with face pulls below: do your shoulder press set, then immediately move to face pulls, then take your real rest before repeating the pair. Front delts (pressing) and rear delts (pulling) are antagonist muscles, so this saves real time without cutting your recovery short on either.", video: "dumbbell shoulder press" },
-          { name: "Face pulls (supersetted with shoulder press)", sets: "3x12-15", rest: "0 sec to shoulder press, 90 sec after pair", muscles: "Rear delts, rotator cuff", note: "Paired with shoulder press above as an antagonist superset.", video: "face pull" },
+          { name: "Superset: Dumbbell shoulder press + Face pulls", sets: "3 rounds: 8-10 press, straight into 12-15 face pulls", rest: "90 sec after each full round", muscles: "Front/side delts (press), rear delts + rotator cuff (face pull)", note: "Do a set of shoulder press, then immediately go into face pulls with no rest between them, then take your real rest before starting the next round. Front delts (pressing) and rear delts (pulling) are antagonist muscles, so this saves real time without cutting recovery short on either one.", video: "dumbbell shoulder press" },
           { name: "Cable lateral raises", sets: "3x12-15", rest: "60 sec", muscles: "Side delts (shoulder width)", video: "cable lateral raise" }
         ]
       },
       {
         title: "Triceps",
-        badge: "updated",
         type: "exercises",
         items: [
           { name: "Overhead cable tricep extension", sets: "3x10-12", rest: "60-90 sec", muscles: "Triceps (long head emphasis)", note: "Swapped in ahead of pushdowns per Nippard's exercise research: a cited 2023 study found overhead extensions caused about 40% more triceps growth than pressdowns, because the long head crosses both the elbow and shoulder and only gets a real stretch with the arm overhead.", video: "overhead cable tricep extension" },
@@ -397,14 +393,17 @@ const days = [
       "Doorway chest stretch, 30 sec each side",
       "Cross-body shoulder stretch, 30 sec each arm",
       "Overhead triceps stretch, 30 sec each arm",
-      "Child's pose or lat stretch on a bar, 30-45 sec"
-    ]
+      "Child's pose or lat stretch on a bar, 30-45 sec",
+      "Optional: Hypervolt percussion massage on chest/shoulders/triceps, 2-3 min per area (see note below)"
+    ],
+    recoveryNote: "425 Fitness Bothell has a free Recovery Center (Hypervolt massage, NormaTec compression, CryoLounge+, HydroMassage). For an upper-body day like this, Hypervolt percussion massage is the best fit, real research backs it for reducing next-day soreness and improving short-term range of motion. Skip the CryoLounge+ (cold therapy) after lifting days specifically, multiple controlled studies found post-exercise cold exposure blunts the muscle-building signal from resistance training, which works against your goal of building serious size and strength. Save cold therapy for a rest day if you want it, not right after training chest/back/arms."
   },
   {
     key: "tue-fri",
     tabLabel: "Tue/Fri",
     fullLabel: "Pull + arms",
     subtitle: "Back, biceps, rear delts, forearms. Pull-ups fresh again.",
+    duration: "~1.5 hours",
     sections: [
       {
         title: "Warm-up",
@@ -418,7 +417,6 @@ const days = [
       },
       {
         title: "Pull-up skill work",
-        badge: "do first",
         type: "exercises",
         items: [
           { name: "Pull-ups (or assisted pull-up machine)", sets: "4-5 x 3-5", rest: "2-3 min", muscles: "Lats, biceps, upper back", note: "Fresh again. Vary difficulty across the week as you progress, see notes below.", video: "pull up" }
@@ -426,41 +424,35 @@ const days = [
       },
       {
         title: "Back",
-        badge: "updated",
         type: "exercises",
         items: [
-          { name: "T-bar row (if 425 has a machine or landmine attachment)", sets: "3x8-10", rest: "90 sec-2 min", muscles: "Mid-back, lats, rear delts", note: "Nippard ranks this his #5 exercise overall for mid-back strength. Check with a trainer whether 425 Fitness has a dedicated T-bar machine or a landmine attachment. If not, skip this and just do an extra set of chest-supported row below instead, nothing is lost either way.", video: "t bar row" },
+          { name: "T-bar row", sets: "3x8-10", rest: "90 sec-2 min", muscles: "Mid-back, lats, rear delts", note: "Nippard ranks this his #5 exercise overall for mid-back strength. Confirmed 425 has this, so it's a core part of back day now.", video: "t bar row" },
           { name: "Lat pulldown", sets: "4x8-12", rest: "90 sec-2 min", muscles: "Lats, biceps", video: "lat pulldown" },
-          { name: "Chest-supported row", sets: "3x10-12", rest: "90 sec", muscles: "Mid-back, rear delts", note: "Your reliable fallback if the T-bar setup above isn't available. Add a 4th set if you're skipping T-bar row entirely.", video: "chest supported row" },
-          { name: "Seated cable row", sets: "2x10-12", rest: "90 sec", muscles: "Mid-back, lats, biceps", note: "Trimmed from 3 sets to make room for the T-bar row addition.", video: "seated cable row" },
-          { name: "Straight-arm cable pulldown", sets: "2x12-15", rest: "60 sec", muscles: "Lats (isolation)", video: "straight arm cable pulldown" },
-          { name: "Dumbbell shrugs", sets: "2x12-15", rest: "60 sec", muscles: "Traps", video: "dumbbell shrug" }
+          { name: "Chest-supported row", sets: "3x10-12", rest: "90 sec", muscles: "Mid-back, rear delts", video: "chest supported row" },
+          { name: "Straight-arm cable pulldown", sets: "1x12-15", rest: "60 sec", muscles: "Lats (isolation)", note: "Trimmed from 2 sets to protect session length. T-bar row, lat pulldown, and chest-supported row already give your back 10 solid sets, well past the point where extra volume adds much more growth in one session, so this stays as a light finisher rather than a full exercise. Seated cable row was cut entirely since it trains the same muscles as the three exercises above it.", video: "straight arm cable pulldown" },
+          { name: "Dumbbell shrugs", sets: "1x12-15", rest: "60 sec", muscles: "Traps", note: "Trimmed from 2 sets for time.", video: "dumbbell shrug" }
         ]
       },
       {
         title: "Biceps",
-        badge: "updated",
         type: "exercises",
         items: [
-          { name: "Preacher curls", sets: "3x8-10", rest: "60-90 sec", muscles: "Biceps (stretch-position emphasis)", note: "Added based on Nippard's #7 overall exercise ranking. The preacher bench locks your upper arm in place and loads the biceps hardest in the stretched bottom position, which is where a lot of the growth stimulus comes from. Optional swap: Nippard's #15 pick, the Bayesian cable curl, is also excellent (constant cable tension at a long muscle length), but your biceps day is already at 3 exercises. If you want to try it, swap it in for preacher curls occasionally rather than adding a 4th exercise on top.", video: "preacher curl" },
-          { name: "EZ bar curls", sets: "2x8-10", rest: "60-90 sec", muscles: "Biceps", note: "Trimmed from 3 sets to make room for preacher curls above.", video: "ez bar curl" },
-          { name: "Incline dumbbell curls", sets: "2x10-12", rest: "60 sec", muscles: "Biceps (long head, stretch focus)", video: "incline dumbbell curl", note: "Arms hang behind the torso here, putting the long head in a lengthened, high-tension position for a deeper stretch. Worth noting: at least one EMG study found no significant difference in overall biceps activation vs. standard curls, so treat this as a stretch-angle variation, not a proven activation upgrade. Hammer curls were dropped this update to keep total biceps volume reasonable now that preacher curls are added, you're still getting brachialis/forearm work from farmer's carries later in this session." }
+          { name: "Preacher curls", sets: "3x8-10", rest: "60-90 sec", muscles: "Biceps (stretch-position emphasis)", note: "Added based on Nippard's #7 overall exercise ranking. The preacher bench locks your upper arm in place and loads the biceps hardest in the stretched bottom position, which is where a lot of the growth stimulus comes from.", video: "preacher curl" },
+          { name: "EZ bar curls", sets: "2x8-10", rest: "60-90 sec", muscles: "Biceps", note: "Incline dumbbell curls were cut to protect session length. Preacher curls and EZ bar curls are both well-supported picks (one of them directly from Nippard's top exercise list), so nothing important is lost by dropping the third biceps exercise.", video: "ez bar curl" }
         ]
       },
       {
         title: "Rear delts",
         type: "exercises",
         items: [
-          { name: "Face pulls", sets: "3x12-15", rest: "60 sec", muscles: "Rear delts, rotator cuff", note: "Pulling movement, placed here rather than shoulder day. Supports shoulder health for pressing and jumping arm-swing.", video: "face pull" },
-          { name: "Rear delt fly (machine or dumbbells)", sets: "2x12-15", rest: "60 sec", muscles: "Rear delts", video: "rear delt fly" }
+          { name: "Face pulls", sets: "3x12-15", rest: "60 sec", muscles: "Rear delts, rotator cuff", note: "Pulling movement, placed here rather than shoulder day. Supports shoulder health for pressing and jumping arm-swing. Rear delt fly was cut, face pulls already hit the rear delts plus the rotator cuff, so it covers most of what the second exercise was adding.", video: "face pull" }
         ]
       },
       {
         title: "Forearms",
         type: "exercises",
         items: [
-          { name: "Farmer's carries", sets: "3x30-45 sec", rest: "60-90 sec", muscles: "Forearms, grip, core", video: "farmers carry" },
-          { name: "Reverse wrist curls", sets: "2x15-20", rest: "45-60 sec", muscles: "Forearm extensors", video: "reverse wrist curl" }
+          { name: "Farmer's carries", sets: "3x30-45 sec", rest: "60-90 sec", muscles: "Forearms, grip, core", note: "Reverse wrist curls were cut. Between farmer's carries here and the grip demand of pull-ups and rows earlier in this session, your forearms are already getting real work without a dedicated isolation exercise.", video: "farmers carry" }
         ]
       }
     ],
@@ -469,14 +461,17 @@ const days = [
       "Lat stretch (arm overhead, lean sideways), 30 sec each side",
       "Bicep wall stretch, 30 sec each arm",
       "Cross-body shoulder stretch, 30 sec each arm",
-      "Wrist flexor/extensor stretch, 20-30 sec each"
-    ]
+      "Wrist flexor/extensor stretch, 20-30 sec each",
+      "Optional: NormaTec compression on arms/forearms if available, or Hypervolt on back and biceps (see note below)"
+    ],
+    recoveryNote: "NormaTec-style compression has real, multi-study support for reducing perceived soreness and improving recovery, particularly at the 48-hour mark when DOMS typically peaks, though the effect on next-day performance is less consistent than the effect on how sore you feel. As with push day, skip the CryoLounge+ (cold plunge/cold air) right after this session if hypertrophy is the goal, the same muscle-growth-blunting research applies to back and biceps just as much as chest."
   },
   {
     key: "wed-sat",
     tabLabel: "Wed/Sat",
     fullLabel: "Legs + power",
-    subtitle: "Quads, hamstrings, glutes, hips, calves, core, plyometrics.",
+    subtitle: "Quads, hamstrings, calves, core, plyometrics, tendon health.",
+    duration: "~1.75-2 hours",
     sections: [
       {
         title: "Warm-up",
@@ -491,7 +486,6 @@ const days = [
       },
       {
         title: "Hip activation",
-        badge: "new",
         type: "exercises",
         items: [
           { name: "Banded lateral walks", sets: "2x15 steps each direction", rest: "30-45 sec", muscles: "Glute medius (outer hip)", note: "Do this before jumping and squatting, not after. Weak glute medius is directly linked to knees caving inward on landing, which increases patellar tendon stress. This wakes it up before you need it.", video: "banded lateral walk" },
@@ -500,12 +494,11 @@ const days = [
       },
       {
         title: "Power / plyometrics",
-        badge: "do second",
         type: "exercises",
         items: [
           { name: "Broad jumps", sets: "3x5", rest: "60-90 sec full recovery", muscles: "Quads, glutes, hamstrings, calves (triple extension)", note: "Legs fresh, right after hip activation. Full recovery between sets, this is about quality not fatigue.", video: "broad jump" },
           { name: "Box jumps (turf area)", sets: "4x5", rest: "60-90 sec", muscles: "Quads, glutes, calves", note: "Step down between reps, don't jump down. This single change meaningfully reduces impact load on the patellar tendon over a summer of repeated sessions.", video: "box jump" },
-          { name: "Depth jumps", sets: "3x5", rest: "90 sec-2 min", muscles: "Reactive strength, tendons, quads", note: "Add starting week 4, only once box jumps feel easy and controlled. Low box, 12-18in. Stick the landing before the next rep. This is the highest-impact plyometric in this program, respect the progression.", video: "depth jump" }
+          { name: "Depth jumps", sets: "3x5", rest: "90 sec-2 min", muscles: "Reactive strength, tendons, quads", note: "Add starting week 4, only once box jumps feel easy and controlled. Low box, 12-18in. Stick the landing before the next rep. This is the highest-impact plyometric in this program, respect the progression. Once added, alternate week to week (Week A: include depth jumps, Week B: skip them) rather than doing them every single session. If your jump quality is dropping late in a session, that's the signal this rotation is meant to prevent, so don't hesitate to start it sooner than week 4 if needed.", video: "depth jump" }
         ]
       },
       {
@@ -514,24 +507,14 @@ const days = [
         items: [
           { name: "Smith machine squats", sets: "4x6-8", rest: "2-3 min", muscles: "Quads, glutes", video: "smith machine squat" },
           { name: "Leg press", sets: "3x10-12", rest: "90 sec-2 min", muscles: "Quads, glutes", video: "leg press" },
-          { name: "Bulgarian split squats", sets: "2x10 each leg", rest: "90 sec", muscles: "Quads, glutes (single-leg, exposes imbalances)", note: "Watch your front knee in the mirror if possible, it should track over your toes, not cave inward. This is a good place to actually feel whether the hip activation work is doing its job.", video: "bulgarian split squat" },
-          { name: "Tempo leg extensions", sets: "2x12-15", rest: "60 sec", muscles: "Quads (isolation)", note: "3-second lowering tempo on every rep, this slow eccentric loading is the specific mechanism that helps build patellar tendon resilience. Extra cue from Nippard: set the seat back a notch if adjustable, it targets the rectus femoris (the quad head that crosses both hip and knee) better than the default position.", video: "leg extension" }
+          { name: "Tempo leg extensions", sets: "2x12-15", rest: "60 sec", muscles: "Quads (isolation)", note: "3-second lowering tempo on every rep, this slow eccentric loading is the specific mechanism that helps build patellar tendon resilience. Extra cue from Nippard: set the seat back a notch if adjustable, it targets the rectus femoris (the quad head that crosses both hip and knee) better than the default position. Bulgarian split squats were cut to protect session length, squats, leg press, and leg extensions already give your quads strong coverage, and you're still getting single-leg landing demand from the plyometric work above.", video: "leg extension" }
         ]
       },
       {
         title: "Tendon resilience",
-        badge: "new",
         type: "exercises",
         items: [
           { name: "Spanish squat or wall-sit isometric hold", sets: "3x30-45 sec", rest: "60-90 sec", muscles: "Quads, patellar tendon (isometric)", note: "The most evidence-backed exercise for patellar tendon resilience in jumping athletes, and part of what elite jump-training programs use to manage exactly this kind of knee stress. Ask a trainer at 425 to set up a Spanish squat band, or use a wall-sit if unavailable.", video: "spanish squat" }
-        ]
-      },
-      {
-        title: "Glutes",
-        badge: "new",
-        type: "exercises",
-        items: [
-          { name: "Hip thrust (machine if available, or barbell)", sets: "3x8-12", rest: "90 sec", muscles: "Glute max", note: "Added from Nippard's #16 ranked exercise. He specifically highlights this as one of the only ways to heavily overload the glutes without also taxing the quads, useful for you since your quads already get a lot of work elsewhere in this session. This is a different glute target than the hip activation work at the start (that's glute medius, this is glute max), both matter for the hip issues you mentioned. Check if 425 has a hip thrust machine, otherwise a barbell hip thrust with a pad works fine.", video: "hip thrust" }
         ]
       },
       {
@@ -539,15 +522,7 @@ const days = [
         type: "exercises",
         items: [
           { name: "Romanian deadlifts (dumbbell or Smith)", sets: "3x8-10", rest: "90 sec-2 min", muscles: "Hamstrings, glutes, lower back", video: "romanian deadlift" },
-          { name: "Seated leg curls", sets: "3x12-15", rest: "60-90 sec", muscles: "Hamstrings (isolation)", note: "Swapped from lying leg curls. Nippard's exercise research cites seated leg curls producing meaningfully more hamstring growth than the lying variation.", video: "seated leg curl" }
-        ]
-      },
-      {
-        title: "Hip flexor care",
-        badge: "new",
-        type: "exercises",
-        items: [
-          { name: "Half-kneeling hip flexor stretch", sets: "2x30-45 sec each side", rest: "n/a", muscles: "Psoas, iliacus", note: "Tight hip flexors and weak glutes reinforce each other: a short hip flexor makes it fire too early and shut off the glute during hip extension, which is exactly the movement that powers a jump. Stretching alone won't fully fix it, which is why this is paired with the hip activation work at the start of the session, not used as a substitute for it.", video: "half kneeling hip flexor stretch" }
+          { name: "Seated leg curls", sets: "3x12-15", rest: "60-90 sec", muscles: "Hamstrings (isolation)", note: "Swapped from lying leg curls. Nippard's exercise research cites seated leg curls producing meaningfully more hamstring growth than the lying variation. Hip thrust was cut from this session per your call, since you specifically don't want to add extra glute growth beyond what squats, Bulgarian-style movements in the plyometrics, and RDLs already provide.", video: "seated leg curl" }
         ]
       },
       {
@@ -563,9 +538,7 @@ const days = [
         type: "exercises",
         items: [
           { name: "Hanging leg raises", sets: "3x10-15", rest: "60-90 sec", muscles: "Lower abs, hip flexors (controlled)", video: "hanging leg raise" },
-          { name: "Cable crunches", sets: "3x12-15", rest: "60 sec", muscles: "Rectus abdominis", video: "cable crunch" },
-          { name: "Plank or side plank", sets: "3x30-45 sec", rest: "45-60 sec", muscles: "Anti-extension/anti-rotation core", note: "Transfers directly to calisthenics holds like L-sits and levers.", video: "plank" },
-          { name: "Hollow body hold", sets: "3x20-30 sec", rest: "45-60 sec", muscles: "Full core, shoulder stability", note: "Direct carryover to almost every calisthenics skill.", video: "hollow body hold" }
+          { name: "Hollow body hold", sets: "3x20-30 sec", rest: "45-60 sec", muscles: "Full core, shoulder stability", note: "Direct carryover to almost every calisthenics skill. Cable crunches and plank were cut to protect session length, these two exercises cover the most calisthenics-relevant core work (hanging control and full-body tension) in less time.", video: "hollow body hold" }
         ]
       }
     ],
@@ -575,8 +548,10 @@ const days = [
       "Seated or standing hamstring stretch, 30 sec each leg",
       "Figure-4 glute stretch, 30 sec each side",
       "Calf stretch against a wall, 30 sec each leg",
-      "Child's pose to release the lower back, 30-45 sec"
-    ]
+      "Child's pose to release the lower back, 30-45 sec",
+      "Optional: NormaTec compression on legs, or CryoLounge+ if knees feel unusually sore or achy (see note below)"
+    ],
+    recoveryNote: "Leg day is where the recovery center trade-off is genuinely more complicated. NormaTec compression has solid research support for reducing leg soreness and is a good default choice here, no real downside for your goals. Cold therapy (CryoLounge+) is more of a judgment call: the same research showing it blunts hypertrophy applies to legs too, so skip it as a routine habit if quad and hamstring growth matters to you. But if your knees are unusually sore, achy, or inflamed after jump-heavy sessions specifically, cold therapy does have real support for reducing joint-level inflammation and soreness, so using it occasionally for knee comfort (not as a weekly ritual) is a reasonable trade-off. When in doubt, default to NormaTec or just the stretches above."
   },
   {
     key: "sun",
@@ -675,6 +650,9 @@ function renderMain() {
   let html = '';
   html += '<div class="day-banner">';
   html += '<h2>' + day.fullLabel + '</h2>';
+  if (day.duration) {
+    html += '<p style="margin-bottom:4px; font-weight:600; color:var(--accent);">Estimated time: ' + day.duration + ' (including warm-up and cooldown)</p>';
+  }
   html += '<p>' + day.subtitle + '</p>';
   html += '<div class="progress-bar-track"><div class="progress-bar-fill" style="width:' + pct + '%"></div></div>';
   html += '</div>';
@@ -733,6 +711,9 @@ function renderMain() {
     });
     html += '</ul></div>';
     html += '<div class="exercise-note" style="margin-top:-4px;">Worth knowing: rigorous research on post-workout stretching for reducing next-day soreness is actually mixed, a solid meta-analysis found no real difference vs. just resting. This cooldown still helps with blood flow, flexibility, and easing your body out of training mode, just don\'t expect it to erase soreness entirely. Some soreness after a new or updated routine is a completely normal training response.</div>';
+    if (day.recoveryNote) {
+      html += '<div class="exercise-note" style="margin-top:8px;">' + day.recoveryNote + '</div>';
+    }
     html += '</div>';
   }
 
